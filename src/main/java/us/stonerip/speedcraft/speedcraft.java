@@ -47,6 +47,7 @@ public final class speedcraft extends JavaPlugin {
         Material mat = event.getMaterial();
 
         if (mat.equals(Material.CACTUS)) {
+        	getLogger().info("Placing");
             event.setBuildable(true);
         }
     }
