@@ -24,6 +24,7 @@ public final class speedcraft extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
     	if (cmd.getName().equalsIgnoreCase("scstart")) { // If the player typed /basic then do the following...
     		getLogger().info("Starting new run!");
+    		sender.sendMessage("[SpeedCraft] Starting a new run!");
     		Player p = (Player)sender;
     		ByteArrayDataOutput out = ByteStreams.newDataOutput();
     		out.writeUTF("Connect");
