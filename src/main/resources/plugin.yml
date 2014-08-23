@@ -1,0 +1,17 @@
+name: SpeedCraft
+main: us.stonerip.speedcraft.speedcraft
+version: 0.1
+commands:
+   scstart:
+      description: Starts a new Run
+      usage: /scstart
+      permission: speedcraft.start
+      permission-message: You don't have <permission>
+permissions:
+    speedcraft.*:
+        description: Gives access to all speedcraft commands
+        children:
+            speedcraft.start: true
+    speedcraft.start:
+        description: Allows you to start a run
+        default: op
