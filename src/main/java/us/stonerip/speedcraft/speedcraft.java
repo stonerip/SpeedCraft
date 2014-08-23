@@ -41,15 +41,5 @@ public final class speedcraft extends JavaPlugin {
             // If this hasn't happened the value of false will be returned.
     	return false; 
     }
-    
-    @EventHandler
-    public void onBlockCanBuild(BlockCanBuildEvent event) {
-        Material mat = event.getMaterial();
-
-        if (mat.equals(Material.CACTUS)) {
-        	getLogger().info("Placing");
-            event.setBuildable(true);
-        }
-    }
 
 }
