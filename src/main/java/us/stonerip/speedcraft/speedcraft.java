@@ -1,9 +1,13 @@
 package us.stonerip.speedcraft;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.BlockCanBuildEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.google.common.io.ByteArrayDataOutput;
@@ -36,6 +40,15 @@ public final class speedcraft extends JavaPlugin {
     	} //If this has happened the function will return true. 
             // If this hasn't happened the value of false will be returned.
     	return false; 
+    }
+    
+    @EventHandler
+    public void onBlockCanBuild(BlockCanBuildEvent event) {
+        Material mat = event.getMaterial();
+
+        if (mat.equals(Material.CACTUS)) {
+            event.setBuildable(true);
+        }
     }
 
 }
