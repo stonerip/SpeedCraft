@@ -42,12 +42,5 @@ public final class speedcraft extends JavaPlugin {
             // If this hasn't happened the value of false will be returned.
     	return false; 
     }
-    
-    @EventHandler
-    public void onLogin(PlayerLoginEvent event) {
-    	Player p = event.getPlayer();
-    	getLogger().info("&2[SpeedCraft] &8Good Luck! Your time has started&r");
-    	p.sendMessage("&2[SpeedCraft] &8Good Luck! Your time has started&r");
-    }
 
 }
