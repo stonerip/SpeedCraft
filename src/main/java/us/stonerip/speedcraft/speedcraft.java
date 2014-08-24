@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.BlockCanBuildEvent;
+import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.google.common.io.ByteArrayDataOutput;
@@ -40,6 +41,13 @@ public final class speedcraft extends JavaPlugin {
     	} //If this has happened the function will return true. 
             // If this hasn't happened the value of false will be returned.
     	return false; 
+    }
+    
+    @EventHandler
+    public void onLogin(PlayerLoginEvent event) {
+    	Player p = event.getPlayer();
+    	getLogger().info("&2[SpeedCraft] &8Good Luck! Your time has started&r");
+    	p.sendMessage("&2[SpeedCraft] &8Good Luck! Your time has started&r");
     }
 
 }
